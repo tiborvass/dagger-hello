@@ -15,7 +15,7 @@ var defaultFigletContainer = dag.
 		"apk", "add", "figlet",
 	})
 
-// A Dagger module to say hello to the world!
+// A Dagger module to say hello to the world and spin up alpine containers
 type Hello struct{}
 
 // Returns an Alpine container

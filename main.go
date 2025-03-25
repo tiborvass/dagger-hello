@@ -18,6 +18,11 @@ var defaultFigletContainer = dag.
 // A Dagger module to say hello to the world!
 type Hello struct{}
 
+// Returns an Alpine container
+func (hello *Hello) Alpine() *dagger.Container {
+	return dag.Container().From("alpine")
+}
+
 // Say hello to the world!
 func (hello *Hello) Hello(ctx context.Context,
 	// Change the greeting
